@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="word_search_plugin.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="word_search_plugin.commands.category"
+            name="Sample Command"
+            id="word_search_plugin.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="word_search_plugin.handlers.SampleHandler"
+            commandId="word_search_plugin.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="word_search_plugin.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="word_search_plugin.menus.sampleMenu"
+               label="Sample Menu"
+               mnemonic="M">
+            <command
+                  commandId="word_search_plugin.commands.sampleCommand"
+                  id="word_search_plugin.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="word_search_plugin.toolbars.sampleToolbar">
+            <command
+                  id="word_search_plugin.toolbars.sampleCommand"
+                  commandId="word_search_plugin.commands.sampleCommand"
+                  icon="icons/sample.png"
+                  tooltip="words search">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

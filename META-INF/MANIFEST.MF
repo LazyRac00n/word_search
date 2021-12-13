@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Word_search_plugin
+Bundle-SymbolicName: word_search_plugin;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: word_search_plugin.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.console;bundle-version="3.8.600",
+ org.eclipse.jface.text;bundle-version="3.15.300"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: word_search_plugin
+Bundle-ActivationPolicy: lazy
